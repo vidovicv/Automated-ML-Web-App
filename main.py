@@ -7,6 +7,7 @@ import pandas as pd
 from streamlit_pandas_profiling import st_profile_report
 import os
 
+#this makes the imported datafile accesible accross the app
 if os.path.exists('./dataset.csv'):
     df = pd.read_csv('dataset.csv', index_col=None)
 
@@ -21,9 +22,9 @@ if choice == "Upload":
     file = st.file_uploader("Upload Your Dataset")
     if file:
         df = pd.read_csv(file, index_col=None)
-        df.to_csv('dataset.csv', index=None)
+        df.to_csv('dataset.csv', index=None) #saves the file to the app
         st.dataframe(df)
-
+# here the automated analysis of data takes place
 if choice == "Profiling":
     st.title("Exploratory Data Analysis")
     profile_df = df.profile_report()
