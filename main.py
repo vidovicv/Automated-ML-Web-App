@@ -13,9 +13,9 @@ if os.path.exists('./dataset.csv'):
 
 with st.sidebar:
     st.image("https://www.onepointltd.com/wp-content/uploads/2020/03/inno2.png")
-    st.title("AutoNickML")
+    st.title("Menu")
     choice = st.radio("Navigation", ["Upload","Profiling","Modelling", "Download"])
-    st.info("This project application helps you build and explore your data.")
+    st.info("This app will help you explore your dataset.")
 
 if choice == "Upload":
     st.title("Upload Your Dataset")
