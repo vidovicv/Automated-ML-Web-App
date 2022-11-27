@@ -12,7 +12,7 @@ if os.path.exists('./dataset.csv'):
     df = pd.read_csv('dataset.csv', index_col=None)
 
 with st.sidebar:
-    st.image("https://www.onepointltd.com/wp-content/uploads/2020/03/inno2.png")
+    st.image("https://i.pinimg.com/originals/02/6d/30/026d305da36a37cfc64db20a3c310ecc.gif")
     st.title("Menu")
     choice = st.radio("Navigation", ["Upload","Profiling","Modelling", "Download"])
     st.info("This app will help you explore your dataset.")
